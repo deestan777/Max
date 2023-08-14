@@ -1,0 +1,1635 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf) format("ttf");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Light.ttf) format("ttf");
+    font-weight: 200
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Medium.ttf) format("ttf");
+    font-weight: 600
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Bold.ttf) format("ttf");
+    font-weight: 800
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body,
+html {
+    color: #fff;
+    font-size: 16px;
+    font-family: Roboto, Colibri, sans-serif;
+    overflow-x: hidden;
+    background-color: #181b21;
+}
+
+.header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 80px 10px 20px;
+    background: url(../img/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.header__container {
+    width: 100%;
+    max-width: 1650px
+}
+
+.header__nav {
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    padding: 0
+}
+
+.header__logo {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 50%
+}
+
+.header__info {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.header__place {
+    width: 100%;
+    max-width: 350px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50px;
+    padding: 5px 30px;
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 30px 0 0
+}
+
+.header__btn-access {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    height: 50px;
+    font-size: 18px;
+    padding: 5px 40px;
+    background-color: #51cf3a;
+    border-radius: 50px;
+    -ms-flex-item-align: center;
+    align-self: center;
+    transition: all .3s ease-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header__btn-access:hover {
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 0 5px 1px #3c992c
+}
+
+.pre-form__btn_info:hover {
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 1px 0 0 #328024
+}
+
+.pre-form__btn {
+    margin-bottom: 1em;
+}
+
+.header__main {
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.header__content {
+    padding: 140px 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 50%
+}
+
+.header__title {
+    font-size: 55px;
+    font-weight: 200
+}
+
+.header__animation {
+    width: 50%
+}
+
+.lasPlace {
+    font-size: 35px;
+    padding: 0 10px;
+    font-weight: 800;
+    color: #51cf3a
+}
+
+.pre-form {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    padding: 70px 0
+}
+
+.pre-form__email {
+    color: #555;
+    height: 45px;
+    width: 100%;
+    max-width: 370px;
+    padding: 0 0 0 20px;
+    border-radius: 45px;
+    border: none;
+    margin: 0 40px 0 0
+}
+
+.pre-form__email:-ms-input-placeholder {
+    font-style: italic
+}
+
+.pre-form__email::placeholder {
+    font-style: italic
+}
+
+.pre-form__btn_info {
+    text-decoration: none;
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    transition: all .2s ease-in
+}
+
+.pre-form__btn_info:hover {
+    background: #49be34
+}
+
+.pre-form__btn {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 45px;
+    width: 220px;
+    border-radius: 45px;
+    background: #51cf3a;
+    box-shadow: 0 1px 0 2px #328024;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase
+}
+
+.help-block-error {
+    position: absolute;
+    top: 48px;
+    font-size: 13px;
+    left: 13px;
+    color: red
+}
+
+.pre-form_graph .help-block-error {
+    top: 27%
+}
+
+@media screen and (max-width: 760px) {
+    .help-block-error {
+        top: 10px
+    }
+    .pre-form_graph .help-block-error {
+        top: 18%
+    }
+}
+
+input {
+    border: none;
+    outline: 0
+}
+
+.pre-form_graph {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    padding: 40px 0 0
+}
+
+.money-counter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    z-index: 1
+}
+
+.money-counter__number {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 5px;
+    border-radius: 0 15px 15px;
+    height: 110px;
+    background: linear-gradient(#51cf3a, #328024)
+}
+
+.money-counter__title {
+    background: #11161a;
+    width: 200px;
+    border-radius: 7px 7px 0 0;
+    padding: 5px 10px
+}
+
+.money-counter span {
+    font-size: 80px;
+    border-radius: 15px;
+    font-weight: 700;
+    line-height: 1
+}
+
+.money-counter .txt span {
+    font-size: 16px;
+    border-radius: 0;
+    font-weight: 400;
+    line-height: 1
+}
+
+.money-counter .dollar,
+.money-counter .odometer-digit {
+    background: linear-gradient(#212c33, #11161a)
+}
+
+.terms__title {
+    color: #49ba35
+}
+
+.digit-con {
+    height: 90px;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: .5em;
+    border-radius: 15px
+}
+
+.digit-con span {
+    background: 0 0;
+    padding: 0;
+    margin: 3px 0 0;
+    font-size: 85px;
+    border-radius: 15px;
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    top: 0;
+    display: block;
+    text-align: center
+}
+
+.header__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 40px 0 20px
+}
+
+.header__slide-down {
+    height: 45px;
+    width: 45px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    box-shadow: 0 1px 2px 1px #51cf3a;
+    position: relative;
+    transition: all .3s linear
+}
+
+.header__slide-down:before {
+    content: url(../img/arrow-down.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: all .2s linear
+}
+
+.header__slide-down:hover {
+    box-shadow: 0 2px 4px 2px #51cf3a
+}
+
+.header__slide-down:hover:before {
+    -ms-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%)
+}
+
+.animate {
+    width: 100%;
+    height: auto
+}
+
+.money-counter .dollar {
+    padding: 3px 15px;
+    margin: 0 3px;
+    border-radius: 10px
+}
+
+.odometer-inside .odometer-digit {
+    margin: 0 3px;
+    padding: 0 18px
+}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-car {
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative
+}
+
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-car .odometer-digit {
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-car .odometer-digit .odometer-digit-spacer {
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: middle;
+    visibility: hidden
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-car .odometer-digit .odometer-digit-inner {
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.odometer.odometer-theme-car .odometer-digit .odometer-ribbon {
+    display: block
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-car .odometer-digit .odometer-ribbon-inner {
+    display: block;
+    -webkit-backface-visibility: hidden
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-car .odometer-digit .odometer-value {
+    display: block;
+    -webkit-transform: translateZ(0)
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-car .odometer-digit .odometer-value.odometer-last-value {
+    position: absolute
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-car.odometer-animating-up .odometer-ribbon-inner {
+    transition: transform 2s
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-car.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%)
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-theme-car.odometer-animating-down .odometer-ribbon-inner {
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%)
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-car.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+    transition: transform 2s;
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-car {
+    color: #fff
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-car .odometer-digit .odometer-digit-inner {
+    left: 45%;
+    -ms-transform: translateX(-45%);
+    transform: translateX(-45%)
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-car.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-car.odometer-animating-up .odometer-ribbon-inner {
+    transition-timing-function: linear
+}
+
+.how-work {
+    background: url(../img/bg-get2_fa4eccdf323d3e83808a56bf3b746cf8.jpg);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0 100px
+}
+
+.how-work__container {
+    width: 100%;
+    max-width: 1650px
+}
+
+.how-work__title-wrap {
+    max-width: 680px;
+    padding: 70px 0 0 0
+}
+
+.how-work__title {
+    font-size: 45px;
+    font-weight: 200;
+    padding: 0 0 25px 0
+}
+
+.how-work__title_bold {
+    display: block;
+    width: 100%;
+    font-weight: 600
+}
+
+.how-work__main {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border: 2px solid #51cf3a;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden
+}
+
+.how-work__video {
+    padding: 20px;
+    width: 50%;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden
+}
+
+.how-work__video video {
+    cursor: pointer;
+    width: 100%
+}
+
+.how-work__content {
+    width: 50%;
+    z-index: 1;
+    padding: 20px;
+    margin: 20px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-left: 2px solid #51cf3a
+}
+
+.how-work__content p {
+    padding: 15px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5
+}
+
+.how-work__blur {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(10px)
+}
+
+.how-get {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: url(../img/bg-get2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 150px 5px
+}
+
+.how-get__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    width: 100%;
+    max-width: 1650px
+}
+
+.how-get__img {
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%
+}
+
+.how-get__main {
+    width: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap
+}
+
+.how-get__title {
+    max-width: 640px;
+    padding: 0 0 40px;
+    font-weight: 200;
+    font-size: 45px
+}
+
+.how-get__title_bold {
+    font-weight: 700;
+    display: block;
+    width: 100%
+}
+
+.how-get__content {
+    max-width: 640px;
+    border: 2px solid #51cf3a;
+    border-radius: 10px;
+    padding: 30px 40px 20px;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, .3)
+}
+
+.how-get__btn-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    padding: 30px 0;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.how-get__email {
+    padding-bottom: 20px
+}
+
+.how-get__form-title {
+    width: 100%
+}
+
+#animate2 {
+    max-width: 580px;
+    max-height: 500px;
+}
+
+.footer {
+    background: #1e282e;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.footer__container {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1650px
+}
+
+.footer__maps {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.footer__contact {
+    width: 50%;
+    padding: 150px 0 0
+}
+
+.footer__img {
+    width: 100%;
+    height: 100%
+}
+
+.contact {
+    max-width: 880px;
+    padding: 0 120px 0 0;
+    font-weight: 300;
+    font-size: 18px
+}
+
+.contact__mail {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px 0
+}
+
+.contact__icon {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px;
+    margin: 0 20px 0 0
+}
+
+.contact__address {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 0
+}
+
+.contact__title {
+    font-size: 45px;
+    font-weight: 200;
+    padding-bottom: 20px
+}
+
+.contact p {
+    padding: 10px 0
+}
+
+.politic {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100px;
+    background: #171e23
+}
+
+.politic__container {
+    width: 100%;
+    max-width: 1650px
+}
+
+.politic__items {
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%
+}
+
+.politic__item {
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 25px;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+.paymant {
+    position: fixed;
+    top: 0;
+    background: url(../img/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 99999;
+    visibility: hidden;
+    opacity: 0;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 140px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: 2s;
+}
+
+.paymant__logo {
+    max-width: 260px;
+    padding: 10px 0 10px
+}
+
+.paymant__img {
+    width: 100%
+}
+
+.paymant__main {
+    border: 2px solid #51cf3a;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .7);
+    margin: 25px 0;
+    width: 50%
+}
+
+.paymant__form {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    padding: 120px 0 0 0;
+    transition: opacity .5s ease .5
+}
+
+.paymant__form_active {
+    display: block;
+    visibility: visible;
+    opacity: 1
+}
+
+.paymant__main_form {
+    max-width: 450px;
+    width: 100%;
+    transition: all .5s linear;
+    animation: anim .5s
+}
+
+.paymant__main-wrap {
+    padding: 100px 20px 100px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    position: relative
+}
+
+.paymant__process {
+    width: 100%;
+    padding: 70px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.paymant__circle {
+    position: relative
+}
+
+.paymant__dots {
+    position: relative;
+    display: block;
+    width: 82px
+}
+
+.paymant__money-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 60px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.paymant__descr-money {
+    position: absolute;
+    padding: 30px 0
+}
+
+.paymant__main_form .paymant__descr-warning,
+.paymant__main_form .paymant__process,
+.paymant__main_form .paymant__title-wrap {
+    display: none
+}
+
+.paymant__main_form .paymant__main-wrap {
+    padding-bottom: 70px
+}
+
+.paymant__main_form .paymant__form {
+    display: block
+}
+
+.paymant__current {
+    color: #51cf3a;
+    font-size: 100px;
+    padding: 0 40px
+}
+
+.paymant__current:after {
+    content: attr(data-money);
+    font-size: 60px;
+    position: absolute;
+    color: #51cf3a;
+    padding: 0 40px
+}
+
+.paymant__current_minus.paymant__current:after {
+    color: #ff3939
+}
+
+.paymant__sum_minus {
+    color: #ff3939
+}
+
+.circle-content {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #51cf3a;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    background-color: #000
+}
+
+.circle__elem {
+    width: 100%;
+    height: auto;
+    max-width: 65px;
+    max-height: 65px;
+    z-index: 5
+}
+
+.circle__elem_log-in {
+    max-width: 50px;
+    max-height: 50px
+}
+
+.circle-1,
+.circle-2,
+.circle-3 {
+    display: block;
+    background-color: #51cf3a;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: -100px;
+    z-index: 2;
+    position: absolute;
+    transition: all .3s ease
+}
+
+.text {
+    color: #51cf3a;
+    position: absolute;
+    padding: 10px 0 0 0;
+    text-align: center;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.border {
+    z-index: 1;
+    height: 2px;
+    width: 82px;
+    border-top: 1px dashed #1f451f
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    height: 10px;
+    width: 100%;
+    overflow: hidden
+}
+
+.wrapper.anim-dot-1 .border-2,
+.wrapper.anim-dot-2 .border-2 {
+    z-index: -4;
+    border-top: 1px dashed #51cf3a
+}
+
+.wrapper.anim-dot-1,
+.wrapper.anim-dot-2 {
+    animation: animBorder 2s linear 1 forwards
+}
+
+form.form-container input {
+    border-radius: 22px;
+    margin: 20px 0
+}
+
+.send-form {
+    margin: 0 auto
+}
+
+.form-container {
+    max-width: 280px;
+    margin: 0 auto
+}
+
+@media screen and (max-width: 1440px) {
+    .paymant__descr-money {
+        padding: 10px 0 40px
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pre-form__btn {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .pre-form__email {
+        margin: 25px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .paymant {
+        padding: 10px 20px
+    }
+    .paymant__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        height: 100vh;
+        width: 75%;
+    }
+    .paymant__logo {
+        padding: 10px 0
+    }
+    .paymant__main-wrap {
+        padding: 100px 10px 100px;
+    }
+    .paymant .border,
+    .paymant__dots {
+        width: 50px
+    }
+    .paymant__process {
+        padding: 50px 0
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .circle-content {
+        width: 65px;
+        height: 65px
+    }
+    .circle__elem {
+        height: 65%;
+        width: 65%
+    }
+    .paymant__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        height: 100vh;
+        width: 100%;
+    }
+    .circle__elem_log-in {
+        max-width: 50%;
+        max-height: 50%
+    }
+    .paymant__process {
+        padding: 40px 0 50px
+    }
+    .paymant__main-wrap {
+        padding: 30px 10px 170px
+    }
+    .paymant__current {
+        font-size: 60px
+    }
+    .paymant__current:after {
+        font-size: 25px;
+        padding: 0 10px
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .paymant__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        height: 100vh;
+        width: 100%;
+    }
+    .circle-content {
+        width: 50px;
+        height: 50px
+    }
+    .circle__elem {
+        height: 65%;
+        width: 65%
+    }
+    .circle__elem_log-in {
+        max-width: 50%;
+        max-height: 50%
+    }
+    .paymant__descr-money {
+        position: absolute;
+        padding: 10px 0
+    }
+    .paymant__process {
+        padding: 30px 0 45px
+    }
+    .paymant__main-wrap {
+        padding: 30px 25px 150px
+    }
+    .paymant__current {
+        font-size: 40px
+    }
+    .paymant__current:after {
+        font-size: 25px;
+        padding: 0 10px
+    }
+}
+
+@keyframes anim {
+    0% {
+        max-width: 100%
+    }
+    100% {
+        max-width: 450px
+    }
+}
+
+@keyframes animBorder {
+    0% {
+        width: 0
+    }
+    100% {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    .header,
+    .how-get,
+    .how-work {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+    .footer__contact {
+        padding-left: 30px
+    }
+    .money-counter .dollar {
+        padding: 3px 15px;
+        margin: 0 3px;
+        border-radius: 10px
+    }
+    .odometer-inside .odometer-digit {
+        margin: 0 3px;
+        padding: 0 18px
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .header__title {
+        font-size: 35px
+    }
+    .header__content {
+        padding: 90px 0
+    }
+    .how-get {
+        padding: 90px 30px
+    }
+    .how-work__title-wrap {
+        padding: 50px 0
+    }
+    .money-counter__number {
+        height: 90px
+    }
+    .footer__contact {
+        padding-top: 20px
+    }
+    .contact {
+        padding: 0 35px 0 0
+    }
+    .money-counter span {
+        font-size: 65px
+    }
+    .money-counter .dollar {
+        padding: 3px 5px;
+        border-radius: 10px;
+        margin: 0 1px
+    }
+    .odometer-inside .odometer-digit {
+        margin: 0 3px;
+        padding: 0 13px
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header__place {
+        height: 65px
+    }
+    .pre-form {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        padding: 35px 0
+    }
+    .pre-form__email {
+        width: 100%;
+        margin: 0 0 15px 0
+    }
+    .pre-form_graph {
+        padding: 20px 0 15px
+    }
+    .pre-form__btn {
+        width: 100%;
+        max-width: 240px
+    }
+    .how-work {
+        padding: 40px
+    }
+    .money-counter {
+        height: 105px;
+        min-width: 320px
+    }
+    .money-counter span {
+        font-size: 45px
+    }
+    .digit-con {
+        height: 75px
+    }
+    .digit-con span {
+        font-size: 75px
+    }
+    .how-get {
+        padding: 60px
+    }
+    .how-get__title {
+        padding: 0 0 20px;
+        font-size: 40px
+    }
+    .how-get__img {
+        padding: 0 10px 0 0
+    }
+    .how-get__btn-container {
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        padding: 10px 0
+    }
+    .how-get__btn-container img {
+        width: 75%;
+        margin: 15px auto 0
+    }
+    .footer__contact {
+        width: 100%
+    }
+    .contact__title {
+        font-size: 35px
+    }
+    .money-counter .dollar {
+        padding: 2px 5px;
+        border-radius: 10px
+    }
+    .odometer-inside .odometer-digit {
+        width: 45px;
+        margin: 0 3px;
+        padding: 0 5px;
+        height: 100%
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 40px 10px 20px
+    }
+    .header__logo {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .header__nav {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .header__info {
+        width: 100%;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .header__btn-access {
+        display: none
+    }
+    .header__place {
+        margin: 40px auto 10px
+    }
+    .header__main {
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap
+    }
+    .header__content {
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        padding: 40px 0
+    }
+    .header__animation {
+        width: 100%
+    }
+    .header__title {
+        text-align: center
+    }
+    .how-work__main {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap
+    }
+    .how-work__title-wrap {
+        padding: 0 0 15px 0
+    }
+    .how-work__title {
+        font-size: 40px;
+        text-align: center
+    }
+    .how-work__video {
+        width: 100%;
+        height: 232px;
+    }
+    .how-work__content {
+        width: 100%;
+        border: none;
+        margin: 0
+    }
+    .how-work__content p {
+        padding: 10px
+    }
+    .pre-form {
+        padding: 30px 0;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+    .pre-form__btn_info {
+        margin: 0 auto
+    }
+    .pre-form__email {
+        margin: 0
+    }
+    .how-work__link {
+        width: 100%;
+        padding: 20px 0
+    }
+    .money-counter {
+        width: 460px
+    }
+    .money-counter span {
+        font-size: 50px
+    }
+    .animate {
+        width: 90%
+    }
+    .money-counter__number {
+        height: 85px
+    }
+    .how-get {
+        padding: 40px 30px 50px
+    }
+    .how-get__title {
+        font-size: 40px;
+        text-align: center
+    }
+    .how-get__container {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap
+    }
+    .how-get__img {
+        width: 100%
+    }
+    .how-get__main {
+        width: 100%
+    }
+    .how-get__btn-container {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        padding: 20px 0 0 0
+    }
+    .how-get__btn-container img {
+        width: 100%;
+        max-width: 220px;
+        padding: 20px 0
+    }
+    .contact__title {
+        font-size: 40px;
+        text-align: center
+    }
+    .footer__container {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap
+    }
+    .footer__contact {
+        width: 100%
+    }
+    .politic__items {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column-reverse nowrap;
+        flex-flow: column-reverse nowrap;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .politic__item {
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .money-counter .dollar {
+        padding: 2px 14px;
+        border-radius: 10px
+    }
+    .odometer-inside .odometer-digit {
+        padding: 0 15px;
+        border-radius: 10px;
+        margin: 0 3px
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        overflow: hidden;
+        font-size: 14px
+    }
+    .header__title {
+        font-size: 24px
+    }
+    .pre-form {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -ms-flex-align: center;
+        align-items: center
+    }
+    .pre-form__email {
+        margin: 0 0 15px 0
+    }
+    .money-counter {
+        width: 100%;
+        max-width: 330px
+    }
+    .money-counter span {
+        font-size: 40px;
+        padding: 0;
+        margin: 0
+    }
+    .money-counter__number {
+        height: 65px
+    }
+    .how-work {
+        padding: 25px 10px
+    }
+    .how-work__title {
+        font-size: 20px
+    }
+    .how-get {
+        padding: 25px 10px
+    }
+    .how-get__title {
+        font-size: 20px
+    }
+    .contact__title {
+        font-size: 20px
+    }
+    .politic__item {
+        text-align: center
+    }
+    .money-counter .dollar {
+        padding: 2px 6px
+    }
+    .odometer-inside .odometer-digit {
+        padding: 0 9px;
+        border-radius: 10px;
+        margin: 0 3px
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .paymant__form {
+        padding: 50px
+    }
+    .paymant__logo {
+        display: flex;
+        justify-content: center;
+        padding: 0
+    }
+    .paymant__img {
+        width: 50%
+    }
+    .money-counter span {
+        padding: 0;
+        margin: 0;
+        border-radius: 10px
+    }
+    .money-counter__number {
+        height: 55px
+    }
+    .odometer-inside .odometer-digit {
+        width: 40px;
+        margin: 0 1px;
+        padding: 0 3px;
+        height: 100%
+    }
+}
+
+@media screen and (max-height: 780px) {
+    .paymant {
+        overflow-y: scroll;
+    }
+}
+
+.terms {
+    transition: 2s;
+}
+
+.fa-times {
+    color: red;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 30px !important;
+    cursor: pointer;
+}
+
+.popup_block_1,
+.popup_block_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+.error {
+    margin-bottom: 10px;
+    color: red;
+}
+
+@media (max-width: 450px) {
+    .error {
+        margin-bottom: 0;
+    }
+    #popup input,
+    select {
+        margin-top: 5px;
+    }
+}
+
+.intl-tel-input.allow-dropdown .selected-flag,
+.intl-tel-input.separate-dial-code .selected-flag {
+    height: 46px;
+}
+
+#popup input,
+select {
+    border-radius: 55px;
+    border: 5px solid #5ec849;
+    margin-top: 10px;
+    height: 3rem;
+    width: 14rem;
+    padding-left: 30px;
+    color: #333 !important;
+    font-style: normal !important;
+    font-size: inherit !important;
+}
+
+.intl-tel-input {
+    display: flex !important;
+    flex-direction: column;
+    color: #333;
+}
+
+#popup label input {
+    width: 20px;
+    height: 15px;
+}
+
+#popup button {
+    background: #51cf3a;
+    border: 5px solid #5ec849;
+    color: white;
+    margin-top: 20px;
+    height: 3rem;
+    width: 14rem;
+    border-radius: 25px;
+}

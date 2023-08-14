@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <title>Maximizator</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+    <link rel="stylesheet" href="css/appnew1.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/foundation.js"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"/>
+
+    <script src="js/lottie_svg.min.js"></script>
+    <!-- <link rel="stylesheet" href="plugins/intlTelInput.min.css" /> -->
+    <style>
+        .iti__country-name {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+<header class="header">
+    <div class="header__container page__container">
+        <div class="header__nav">
+            <div class="header__logo"><img class="logo" src="img/logo.svg"/></div>
+            <div class="header__info">
+                <div class="header__place">Осталось свободных мест: <span class="lasPlace" id="lastPlace">42</span>
+                </div>
+                <a class="header__btn-access btn-access" id="form-start">Получить доступ</a>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="header__content">
+                <h1 class="header__title">Запустите <strong>Максимизатор</strong> и зарабатывайте на автомате.</h1>
+                <button class="pre-form__btn">Запустить</button>
+                <div class="money-counter">
+                    <div class="money-counter__title">
+                        <h3>Выплаты сегодня:</h3>
+                    </div>
+                    <div class="money-counter__number">
+                        <div class="odometer odometer-auto-theme" id="odometer">
+                            <div class="odometer-inside">
+                                    <span class="odometer-digit">
+                                            <span class="odometer-digit-spacer">8</span>
+                                    <span class="odometer-digit-inner">
+                                                <span class="odometer-ribbon">
+                                                    <span class="odometer-ribbon-inner"><span
+                                                            class="odometer-value">1</span></span>
+                                    </span>
+                                    </span>
+                                    </span>
+                                <span class="odometer-digit">
+                                            <span class="odometer-digit-spacer">8</span>
+                                    <span class="odometer-digit-inner">
+                                                <span class="odometer-ribbon">
+                                                    <span class="odometer-ribbon-inner"><span
+                                                            class="odometer-value">5</span></span>
+                                    </span>
+                                    </span>
+                                    </span>
+                                <span class="odometer-digit">
+                                            <span class="odometer-digit-spacer">8</span>
+                                    <span class="odometer-digit-inner">
+                                                <span class="odometer-ribbon">
+                                                    <span class="odometer-ribbon-inner"><span
+                                                            class="odometer-value">4</span></span>
+                                    </span>
+                                    </span>
+                                    </span>
+                                <span class="odometer-digit">
+                                            <span class="odometer-digit-spacer">8</span>
+                                    <span class="odometer-digit-inner">
+                                                <span class="odometer-ribbon">
+                                                    <span class="odometer-ribbon-inner"><span
+                                                            class="odometer-value">2</span></span>
+                                    </span>
+                                    </span>
+                                    </span>
+                                <span class="odometer-digit">
+                                            <span class="odometer-digit-spacer">8</span>
+                                    <span class="odometer-digit-inner">
+                                                <span class="odometer-ribbon">
+                                                    <span class="odometer-ribbon-inner"><span
+                                                            class="odometer-value">4</span></span>
+                                    </span>
+                                    </span>
+                                    </span>
+                                <span class="odometer-digit">
+                                            <span class="odometer-digit-spacer">8</span>
+                                    <span class="odometer-digit-inner">
+                                                <span class="odometer-ribbon">
+                                                    <span class="odometer-ribbon-inner"><span
+                                                            class="odometer-value">3</span></span>
+                                    </span>
+                                    </span>
+                                    </span>
+                            </div>
+                        </div>
+                        <span class="dollar">$</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header__animation">
+                <div class="animate" id="animate1"></div>
+            </div>
+        </div>
+        <div class="header__footer"><a class="header__slide-down" href="#section2"></a></div>
+    </div>
+</header>
+<section class="how-work" id="section2">
+    <div class="how-work__container">
+        <div class="how-work__title-wrap">
+            <h2 class="how-work__title">
+                Как работает<br/>
+                <strong>Максимизатор прибыли?</strong>
+            </h2>
+        </div>
+        <div class="how-work__main">
+            <!--            <div class="how-work__blur"></div>-->
+            <div class="how-work__video">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ugOwKJu6tLI" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="how-work__content">
+                <p>
+                    <strong>Максимизатор прибыли</strong> разработан на основе уникальных торговых алгоритмов, который с
+                    точностью от 97% гарантирует прибыльное вхождение в сделку.
+                </p>
+                <p>Благодаря встроенному скрипту входа, вы гарантированно будете получать прибыль Всё что от вас
+                    требуется, это успеть запустить Максимизатор прибыли пока есть свободные места.</p>
+                <h2>Максимизатор прибыли</h2>
+                <p>
+                    На сегодняшний день это самая продвинутая система.
+                </p>
+                <div class="how-work__link"><a class="pre-form__btn pre-form__btn_info btn-access"
+                                               href="javascript:void(0)"> Получить доступ</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-get">
+    <div class="how-get__container">
+        <div class="how-get__img">
+            <div class="animate" id="animate2"></div>
+        </div>
+        <div class="how-get__main">
+            <h2 class="how-get__title">
+                Как получить<br/>
+                <strong>Максимизатор прибыли</strong>
+            </h2>
+            <div class="how-get__content">
+                <p>
+                    Вам достаточно нажать кнопку запустить, если есть свободные места,<br/> максимизатор прибыли
+                    запустится и начнет зарабатывать для Вас деньги.
+                </p>
+                <div class="pre-form pre-form_graph form1" id="form2">
+                    <div class="pre-form__btn-container how-get__btn-container">
+                        <button class="pre-form__btn" id="form-start">Запустить</button>
+                        <img src="img/safe2_7d823528153ee92e599fa4589e4f5f3f.png" alt="trust"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="footer">
+    <div class="footer__container">
+        <div class="footer__contact">
+            <div class="contact">
+                <h2 class="contact__title">Служба поддержки пользователя</h2>
+                <p>Служба поддержки пользователя находится на связи 24/7</p>
+                <p>Используйте для связи со службой поддержки почтовый адрес</p>
+                <p>Вы можете задать любой интересующий Вас вопрос по этому адресу, а также сообщить об ошибках или сбоях
+                    системы в случае их обнаружения. Спасибо!</p>
+                <div class="contact__mail" style="width: 78%;">
+                    <span class="contact__icon"><img src="img/mail.png" alt="mail"/></span><span><a href="#"
+                                                                                                    class="__cf_email__"><span
+                        class="__cf_email__" data-cfemail="37444247475845437741525956544259415341194f4e4d">[email&#160;protected]</span></a>
+                        </span>
+                </div>
+                <div class="contact__address">
+                    <span class="contact__icon"><img src="img/marker.png" alt="marker"/></span>
+                    <span>127562, Россия, г. Москва, ул. Митина 3 стр. 7 оф. 540</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer__maps"><img class="footer__img" src="img/maps_b0bf07b00ed012be06904210d5ca8554.png"
+                                       alt="maps"/></div>
+    </div>
+</div>
+<footer class="politic">
+    <div class="politic__container">
+        <div class="politic__items">
+            <div class="politic__item">Copyright 2022. Все права защищены</div>
+            <div class="politic__item"><a href="policy.html" target="_blank">Политика конфиденциальности</a></div>
+            <div class="politic__item"><a href="risk.html" target="_blank">Предупреждение о рисках</a></div>
+            <div class="politic__item"><a href="agreement.html" target="_blank">Пользовательское соглашение</a></div>
+        </div>
+    </div>
+</footer>
+
+<div class="paymant">
+    <div class="paymant__header">
+        <div class="paymant__logo"><img class="paymant__img" src="img/maxilogo.svg" alt="logo"/></div>
+    </div>
+    <div class="paymant__main">
+        <div class="paymant__main-wrap">
+            <div class="popup_form" id="popup">
+                <form class="c-form">
+                    <input id="countryinp" type="hidden" name="countryinp" value=""/>
+                    <input type="hidden" name="ip" value="176.36.9.243"/>
+                    <input type="hidden" name="pixel" value="">
+                    <input type="hidden" name="utm" value="">
+                    <div class="popup">
+                        <div class="popup_article"></div>
+                        <div class="popup_block_1">
+                            <input type="text" name="name" placeholder="Имя" required/>
+                            <input type="text" name="lastname" placeholder="Фамилия" required/>
+                            <input type="email" name="email" placeholder="Email"/>
+                        </div>
+
+                        <div style="margin-top: 1rem;" class="col-xs-12 col-sm-12">
+                            <input class="form-control phone req" name="phone" type="tel" value="" required/>
+                        </div>
+                        <div class="col-xs-12">
+                            <button name="submitBtn" type="submit" class="btn_send">
+                                Зарегистрироваться
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/CSSRulePlugin.min.js"></script>
+<script src="js/odometer.js"></script>
+<script src="js/app6.js"></script>
+<script src="js/canva.min.js"></script>
+<script src="./js/foundation.js"></script>
+<script src="./js/CSSRulePlugin.min.js"></script>
+<script src="./js/canva.min.js"></script>
+<div class='result'></div>
+<script>
+    let animation = lottie.loadAnimation({
+        container: document.getElementById('animate1'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './img/data.json'
+    })
+    let animation2 = lottie.loadAnimation({
+        container: document.getElementById('animate2'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './img/data2.json'
+    })
+</script>
+
+</body>
+
+</html>
